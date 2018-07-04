@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename package &apos;anagrams&apos; to &apos;Anagrams&apos;&#x0D;&#x0A;- Original project: &apos;anagrams&apos;&#x0D;&#x0A;- Original element: &apos;anagrams/src/anagrams&apos;&#x0D;&#x0A;- Renamed element: &apos;anagrams/src/Anagrams&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;anagrams&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;anagrams" name="Anagrams" qualified="false" references="true" stamp="1529256505436" textual="false" version="1.0"/>
-</session>
