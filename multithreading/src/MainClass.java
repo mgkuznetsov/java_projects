@@ -57,6 +57,7 @@ public class MainClass {
 	 * The input for synchronized statement must be 
 	 * For example, this method returns the absolute value of some integer
 	 * We can do this processing and know that some other thread isn't simultaneously modifying the value
+	 * Advantage of synchronized statement is that it makes the synchronized part of the code as small as possible
 	 */
 	private static void basicSynchronizedStatement(Integer value) {
 		//Synchronize on Integer object "value"
