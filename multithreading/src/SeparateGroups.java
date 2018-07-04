@@ -44,8 +44,4 @@ class SeparateGroups {
 			}
 		}
 	}
-	
-	class InnerClass {
-		void 
-	}
 }
