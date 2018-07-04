@@ -1,0 +1,6 @@
+1502816745361	Rename field 'bucketArray'
+1502816801845	Rename field 'numBuckets'
+1502817456454	Delete element
+1502817767889	Rename method 'getBucketIndex'
+1502827270364	Rename local variable 'newBucketArray'
+1502827609374	Rename method 'getIndex'

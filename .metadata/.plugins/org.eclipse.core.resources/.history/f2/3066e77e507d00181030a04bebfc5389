@@ -1,0 +1,33 @@
+
+/**
+ * Our custom thread class that reports it's status every so often.
+ * This thread extends the Thread class, which means it implements the Runnable interface
+ * @author Admin
+ *
+ */
+public class TestThread extends Thread {
+
+	private String name; //name of this thread
+	private int delay;
+	private int secondDelay;
+	
+	public TestThread(String name, int secondDelay) {
+		this.name = name;
+		this.secondDelay = secondDelay;
+		this.delay = secondDelay*1000;
+	}
+	
+	public void run() {
+		try {
+			while(true) {
+				Thread.sleep(delay);
+				System.out.println("Thread: " + name + ", reporting every " + secondDelay + " seconds.");
+			}
+		} catch(InterruptedException e) {
+			System.out.println("Thread: " + name + ". Thread is interrupted.");
+		}
+		
+		System.out.println("Thread: " + name + ". Thread will exit.");
+		return; //Exit the thread
+	}
+}

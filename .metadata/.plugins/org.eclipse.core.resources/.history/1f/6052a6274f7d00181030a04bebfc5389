@@ -1,0 +1,22 @@
+
+public class Multithreading {
+	
+	/**
+	 * NOTES:
+	 * Out of the box, the Thread object does nothing
+	 * We need to provide a class that Overrides the "Runnable" interface.		
+	 * Starts new thread. This will invoke t1's "run" method. 
+	 * When the thread is done, the "run" method will return.
+	 * Invoking the thread multiple times causes IllegalThreadStateException 
+	 * @param args
+	 */
+	public static void main(String args[]) {
+		
+		//Instantiate our threads:
+		TestThread t1 = new TestThread("t1", 5);
+		TestThread t2 = new TestThread("t2", 10);
+		
+			
+		
+	}
+}

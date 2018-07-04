@@ -1,0 +1,91 @@
+public class Multithreading {
+
+	/**
+	 * Out of the box, the Thread object does nothing
+	 * We need to provide a class that Overrides the "Runnable" interface.
+	 * Starts new thread. This will invoke t1's "run" method.
+	 * When the thread is done, the "run" method will return. Invoking the
+	 * thread multiple times causes IllegalThreadStateException
+	 */
+	public static void basicMultithreadingExtendingThreadClass() {
+
+		// Instantiate our threads:
+		TestThread t1 = new TestThread("t1", 1);
+		TestThread t2 = new TestThread("t2", 2);
+
+		// Start threads:
+		t1.start();
+		t2.start();
+	}
+
+	public static void basicMultithreadingAnonymousInnerClass() {
+		
+	}
+	
+	/**
+	 * We can also do multithreading by implementing the Runnable interface.
+	 * This is better because Java doesn't support multiple inheritence. This
+	 * means that we can only extend Thread class and can't extend other class.
+	 * A thread object can then execute whatever we specify in the "run" method.
+	 */
+	public static void basicMultithreadingImplementingRunnableInterface() {
+
+		// Instantiate our threads:
+		Runnable t3 = new TestRunnable("t3", 3);
+		Runnable t4 = new TestRunnable("t4", 4);
+
+		// Start threads:
+		new Thread(t3).start();
+		new Thread(t4).start();
+	}
+
+	// TODO: Callables
+
+	// TODO: FutureTasks
+
+	public static void main(String args[]) {
+
+		// Using a class that extends Thread Class:
+		basicMultithreadingExtendingThreadClass(); 
+													
+		//Using a class that implements Runnable interface:
+		basicMultithreadingImplementingRunnableInterface();
+		
+		//Defining "run" method in an anonymous inner class for security purposes:
+
+		ThreadGroup[] g4;
+
+		ThreadGroup[] g = new ThreadGroup[5];
+
+		ThreadGroup g2[] = new ThreadGroup[5];
+
+		ThreadGroup g1[]; // look up how to specify an array this way. Does this
+							// just create reference to array?
+
+		// What is the point of using ThreadGroups?
+
+		// Look at p.356 for synchronization of PrintQueue
+
+		// TODO: Learn about ThreadGroup
+
+		// We don't need to reference threads that we create, because these
+		// threads are put into ThreadGroups
+
+		// Because they are in thread groups, the threads are NOT garbage
+		// collected
+
+		// TODO: PrintQueue exercise with anonymous inner class - p.290
+
+		// Another gotcha is that run() is a public method, so any other class
+		// can execute it
+
+		// We can solve this problem by:
+
+		// 1. Checking if the thread that should be executing the run method is
+		// the intended thread (use Thread.currentThread)
+
+		// 2.Creating an anonymous inner class where we override the run method.
+
+	}
+
+}
